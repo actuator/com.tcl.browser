@@ -1,7 +1,7 @@
 ## Vulnerability Report
 
 ### Overview:
-A Remote Code Execution (RCE) vulnerability has been discovered in the `com.tcl.browser` application on the Android platform. The vulnerability allows an attacker to execute arbitrary code on the victim's device without requiring any permissions.
+A Remote Code Execution (RCE) vulnerability has been discovered in the `com.tcl.browser` application on the Android platform. The vulnerability allows an attacker to execute arbitrary JavsScript code within the context of the application without any permissions.
 
 ### Application Details:
 - **Application Name:** 'Browser TV Web - BrowseHere' com.tcl.browser
@@ -28,16 +28,8 @@ This vulnerability is particularly concerning because:
 
 ### Proof of Concept (PoC):
 
-To demonstrate the vulnerability, one can create a simple Android app that invokes the exported `BrowsePageActivity` activity.
+To demonstrate the vulnerability, one can create a simple Android app that invokes the exported `BrowsePageActivity` activity:
 
-package com.example.d3m0;
-
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-
-public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-}
+
 
 
 ### Impact:
@@ -77,17 +69,5 @@ Assisting in malicious persistence.
 
 1. **Restrict Activity Export:** Do not export activities unless necessary.
 If required, implement proper authorization checks to ensure that only legitimate entities can invoke it.
-
-
-**Note:**
-
-### The programmatic removal of JavaScript Tnterfaces post setting the user agent in the WebView limits leveraging certain methods.
-
-````
-webView.removeJavascriptInterface("searchBoxJavaBridge_");
-webView.removeJavascriptInterface("accessibility");
-webView.removeJavascriptInterface("accessibilityTraversal");
-
-````
 
 

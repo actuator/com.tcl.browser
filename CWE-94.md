@@ -28,6 +28,8 @@ This vulnerability is particularly concerning because:
 
 ### Proof of Concept (PoC):
 
+![poc](https://github.com/actuator/com.tcl.browser/assets/78701239/15b32aff-92ac-41f2-9d48-4ae5a04ce354)
+
 To demonstrate the vulnerability, one can create a simple Android app that invokes the exported `BrowsePageActivity` activity:
 
 

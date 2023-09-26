@@ -4,6 +4,8 @@
 A Remote Code Execution (RCE) vulnerability has been discovered in the `com.tcl.browser` application on the Android platform. The vulnerability allows an attacker to execute arbitrary JavsScript code within the context of the application without any permissions.
 
 ### Application Details:
+![image](https://github.com/actuator/com.tcl.browser/assets/78701239/a6bb4700-39d5-4100-8e31-b1a7b018bc41)
+- **Vendor:** - Shenzhen TCL New Technology Co., Limited
 - **Application Name:** 'Browser TV Web - BrowseHere' com.tcl.browser
 - **Version:** 6.49.059_a62ef28f_230730_gp
 - **Component:** com.tcl.browser.portal.browse.activity.BrowsePageActivity

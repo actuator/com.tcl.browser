@@ -63,7 +63,7 @@ Successful exploitation allows an attacker to:
 - Execute arbitrary JavaScript code within the context of the `com.tcl.browser` app.
 - Perform any action that the `com.tcl.browser` app can do, potentially leading to further device exploitation or data theft.
 
-![image](https://github.com/actuator/com.tcl.browser/assets/78701239/1eaaf38d-2fee-46f0-a80e-0c23b442dd71)
+
 
 Enabling settings.setDomStorageEnabled(true) in WebView allows use of Web Storage API. Risks include:
 

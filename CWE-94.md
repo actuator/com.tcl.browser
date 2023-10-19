@@ -17,8 +17,8 @@ A Remote Code Execution (RCE) vulnerability has been discovered in the `com.tcl.
 - **Vulnerability Type:** Remote Code Execution (RCE)
 - **Attack Vector:** Via an exported activity component
 - **Permissions Required:** None
-- **Severity:** High
 
+- 
 ### Description:
 
 The `com.tcl.browser.portal.browse.activity.BrowsePageActivity` activity in the `com.tcl.browser` app is exported and can be invoked by any third-party application without requiring any permissions. A malicious app can exploit this to execute arbitrary JavaScript code within the context of the `com.tcl.browser` application.
@@ -65,7 +65,9 @@ Successful exploitation allows an attacker to:
 
 
 
-Enabling settings.setDomStorageEnabled(true) in WebView allows use of Web Storage API. Risks include:
+The enabled 'settings.setDomStorageEnabled(true)' value in the app's WebView allows for the use of the Web Storage API.
+
+Risks include:
 
 Credential harvesting if websites store sensitive data.
 Manipulating or flooding stored values.

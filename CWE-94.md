@@ -1,3 +1,8 @@
+
+![image](https://github.com/actuator/com.tcl.browser/assets/78701239/82062ff5-9806-499b-85ed-68cb3594e8ae)
+
+
+
 ## Vulnerability Report
 
 ### Overview:

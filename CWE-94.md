@@ -27,7 +27,7 @@ The `com.tcl.browser.portal.browse.activity.BrowsePageActivity` activity in the 
 
 This vulnerability is particularly concerning because:
 - The victim does not need to grant any special permissions to any installed applications.
-- The attack can be initiated remotely without user interaction.
+- The attack can be initiated remotely.
 
 ![image](https://github.com/actuator/com.tcl.browser/blob/main/poc.gif)
 

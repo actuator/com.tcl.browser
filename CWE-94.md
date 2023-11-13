@@ -29,10 +29,15 @@ This vulnerability is particularly concerning because:
 - The victim does not need to grant any special permissions to any installed applications.
 - The attack can be initiated remotely.
 
+### Proof of Concept (PoC):
+
+
 ![image](https://github.com/actuator/com.tcl.browser/blob/main/poc.gif)
 
 
-### Proof of Concept (PoC):
+
+![image](https://github.com/actuator/com.tcl.browser/blob/main/Facebook.gif)
+
 
 ![poc](https://github.com/actuator/com.tcl.browser/assets/78701239/15b32aff-92ac-41f2-9d48-4ae5a04ce354)
 

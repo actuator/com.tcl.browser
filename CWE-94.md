@@ -13,7 +13,7 @@ A Remote Code Execution (RCE) vulnerability has been discovered in the `com.tcl.
 
 - **Vendor:** - Shenzhen TCL New Technology Co., Limited
 - **Application Name:** 'Browser TV Web - BrowseHere' com.tcl.browser
-- **Version:** 6.49.059_a62ef28f_230730_gp
+- **Version:** 6.60.055_e974ebe7_231109_gp
 - **Component:** com.tcl.browser.portal.browse.activity.BrowsePageActivity
 
 ### Vulnerability Details:
@@ -74,9 +74,6 @@ To demonstrate the vulnerability, one can create a simple Android app that invok
 
 Successful exploitation allows an attacker to:
 - Execute arbitrary JavaScript code within the context of the `com.tcl.browser` app.
-- Perform any action that the `com.tcl.browser` app can do, potentially leading to further device exploitation or data theft.
-
-
 
 The enabled 'settings.setDomStorageEnabled(true)' value in the app's WebView allows for the use of the Web Storage API.
 

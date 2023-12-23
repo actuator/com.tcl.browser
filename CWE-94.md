@@ -14,7 +14,7 @@ A Remote Code Execution (RCE) vulnerability has been discovered in the `com.tcl.
 
 - **Vendor:** - Shenzhen TCL New Technology Co., Limited
 - **Application Name:** 'Browser TV Web - BrowseHere' com.tcl.browser
-- **Version:** 6.60.055_e974ebe7_231109_gp
+- **Version:** 6.65.022_dab24cc6_231221_gp
 - **Component:** com.tcl.browser.portal.browse.activity.BrowsePageActivity
 
 ### Vulnerability Details:
